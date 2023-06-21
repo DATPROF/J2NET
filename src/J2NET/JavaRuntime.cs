@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using J2NET.Exceptions;
 using J2NET.Utilities;
@@ -7,26 +8,36 @@ namespace J2NET
 {
     public static class JavaRuntime
     {
-        public static Process ExecuteJar(string value, string arguments = null)
+        public static Process ExecuteJar(string value, string arguments = null, bool createNoWindow = false)
         {
-            return Execute($"-jar {value}", arguments);
+            return Execute($"-jar {value}", arguments, createNoWindow);
         }
 
-        public static Process ExecuteClass(string value, string arguments = null)
+        public static Process ExecuteClass(string value, string arguments = null, bool createNoWindow = false)
         {
-            return Execute($"-cp {value}", arguments);
+            return Execute($"-cp {value}", arguments, createNoWindow);
         }
 
-        public static Process Execute(string value, string arguments = null)
+        public static Process Execute(string value, string arguments = null, bool createNoWindow = false)
         {
             var runtimePath = PathUtility.GetRuntimePath();
 
             if (!Directory.Exists(Path.GetDirectoryName(runtimePath)))
                 throw new RuntimeNotFoundException();
 
-            return !string.IsNullOrEmpty(arguments)
-                ? Process.Start(runtimePath, $"{value} {arguments}")
-                : Process.Start(runtimePath, $"{value}");
+            var process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    FileName = runtimePath,
+                    Arguments = !string.IsNullOrEmpty(arguments)
+                        ? $"{value} {arguments}"
+                        : $"{value}",
+                    CreateNoWindow = createNoWindow,
+                }
+            };
+            process.Start();
+            return process;
         }
     }
 }
