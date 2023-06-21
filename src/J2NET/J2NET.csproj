@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Authors>CHEQUER</Authors>
+    <Authors>DATPROF</Authors>
     <Company>CHEQUER</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageProjectUrl>https://github.com/chequer-io/J2NET</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/chequer-io/J2NET</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
     <PackageIcon>Logo.jpg</PackageIcon>
     <Description>Provides an environment for running Java in .NET</Description>
   </PropertyGroup>
