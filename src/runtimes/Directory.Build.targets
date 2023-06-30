@@ -21,13 +21,13 @@
 
     <PropertyGroup Label="NuGet">
         <Title>J2NET.Runtime.$(RuntimeIdentifier)</Title>
-        <Authors>CHEQUER</Authors>
-        <Company>CHEQUER</Company>
+        <Authors>DATPROF</Authors>
+        <Company>DATPROF</Company>
         <Description>J2NET runtime via OpenJRE $(JREVersion)</Description>
-        <PackageProjectUrl>https://github.com/chequer-io/J2NET</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
         <PackageLicenseFile>openjre/legal/java.base/LICENSE</PackageLicenseFile>
         <PackageIcon>Logo.jpg</PackageIcon>
-        <RepositoryUrl>https://github.com/chequer-io/J2NET</RepositoryUrl>
+        <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

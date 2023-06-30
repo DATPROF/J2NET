@@ -4,6 +4,10 @@
         <OutputType>Module</OutputType>
         <TargetFramework>netstandard2.1</TargetFramework>
         <RuntimeIdentifier>linux-arm64</RuntimeIdentifier>
+        <Authors>DATPROF</Authors>
+        <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
+        <Company>DATPROF</Company>
     </PropertyGroup>
 
 </Project>

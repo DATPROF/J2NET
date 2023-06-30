@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>DATPROF</Authors>
-    <Company>CHEQUER</Company>
+    <Company>DATPROF</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
