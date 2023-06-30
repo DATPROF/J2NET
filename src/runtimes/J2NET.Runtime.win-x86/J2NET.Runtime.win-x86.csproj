@@ -11,6 +11,8 @@
         <Company>DATPROF</Company>
         <PackageId>DATPROF.J2NET.Runtime.win-x86</PackageId>
         <Product>J2NET.Runtime.win-x86</Product>
+        <AssemblyName>DATPROF.J2NET.Runtime.win-x86</AssemblyName>
+        <RootNamespace>DATPROF.J2NET.Runtime.win-x86</RootNamespace>
     </PropertyGroup>
 
 </Project>

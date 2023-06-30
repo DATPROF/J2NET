@@ -10,6 +10,8 @@
         <Company>DATPROF</Company>
         <PackageId>DATPROF.J2NET.Runtime.linux-x64</PackageId>
         <Product>J2NET.Runtime.linux-x64</Product>
+        <AssemblyName>DATPROF.J2NET.Runtime.linux-x64</AssemblyName>
+        <RootNamespace>DATPROF.J2NET.Runtime.linux-x64</RootNamespace>
     </PropertyGroup>
 
 </Project>
