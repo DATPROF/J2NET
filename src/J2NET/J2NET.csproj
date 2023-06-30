@@ -9,6 +9,8 @@
     <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
     <PackageIcon>Logo.jpg</PackageIcon>
     <Description>Provides an environment for running Java in .NET</Description>
+    <PackageId>DATPROF.J2NET</PackageId>
+    <Product>DATPROF.J2NET</Product>
   </PropertyGroup>
 
   <ItemGroup>
