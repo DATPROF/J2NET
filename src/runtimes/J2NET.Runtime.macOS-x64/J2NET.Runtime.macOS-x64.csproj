@@ -9,7 +9,7 @@
         <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
         <Company>DATPROF</Company>
         <PackageId>DATPROF.J2NET.Runtime.macOS-x64</PackageId>
-        <Product>DATPROF.J2NET.Runtime.macOS-x64</Product>
+        <Product>J2NET.Runtime.macOS-x64</Product>
     </PropertyGroup>
 
 </Project>
