@@ -116,7 +116,7 @@ function dotnet_nuget_push {
 
 function nupkg_remove_lib {
     local project="$(basename $1)"
-    local nupkg="$project.$version.nupkg"
+    local nupkg="DATPROF.$project.$version.nupkg"
     local tmpDir="$nupkg.tmp"
     local nuspec="$tmpDir/$project.nuspec"
 

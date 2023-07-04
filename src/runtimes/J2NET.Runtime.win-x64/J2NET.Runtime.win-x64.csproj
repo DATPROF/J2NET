@@ -9,7 +9,7 @@
         <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
         <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
         <Company>DATPROF</Company>
-        <PackageId>J2NET.Runtime.win-x64</PackageId>
+        <PackageId>DATPROF.J2NET.Runtime.win-x64</PackageId>
         <Product>J2NET.Runtime.win-x64</Product>
     </PropertyGroup>
 
