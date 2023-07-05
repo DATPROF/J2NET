@@ -52,7 +52,11 @@ function to_lower {
 
 function openjre_get_release_value {
     local release="$1/obj/openjre/release"
+    echo "[openjre_get_release_value] release: $release "
+    
     local value=$(grep "$2=" $release | cut -d'=' -f2)
+    echo "[openjre_get_release_value] value: $value "
+    
     echo $value | perl -pe 's/["\r\n\t\f\v]//g'
 }
 
@@ -60,11 +64,12 @@ function openjre_verify {
     local path=$1
     local csproj="$path/$(basename $runtime).csproj"
 
+    echo "[openjre] path: $path"
     echo "[openjre] csproj: $csproj"
 
     echo "[openjre] verify runtime identifier"
 
-    local openjre_release_value=openjre_get_release_value
+    local openjre_release_value="$(openjre_get_release_value)"
     
     echo "[openjre] openjre_release_value: $openjre_release_value $"
   
