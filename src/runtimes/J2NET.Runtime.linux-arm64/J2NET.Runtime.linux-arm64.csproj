@@ -9,8 +9,8 @@
         <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
         <Company>DATPROF</Company>
         <PackageId>DATPROF.J2NET.Runtime.linux-arm64</PackageId>
-        <Product>J2NET.Runtime.linux-arm64</Product>
-        <AssemblyName>.J2NET.Runtime.linux-arm64</AssemblyName>
+        <Product>DATPROF.J2NET.Runtime.linux-arm64</Product>
+        <AssemblyName>DATPROF.J2NET.Runtime.linux-arm64</AssemblyName>
     </PropertyGroup>
 
 </Project>
