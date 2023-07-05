@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <PropertyGroup Label="NuGet">
-        <Title>DATPROF.J2NET.Runtime.$(RuntimeIdentifier)</Title>
+        <Title>J2NET.Runtime.$(RuntimeIdentifier)</Title>
         <Authors>DATPROF</Authors>
         <Company>DATPROF</Company>
         <Description>J2NET runtime via OpenJRE $(JREVersion)</Description>

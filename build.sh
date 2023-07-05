@@ -52,8 +52,6 @@ function to_lower {
 
 function openjre_get_release_value {
     local release="$1/obj/openjre/release"
-    echo "[openjre_get_release_value] release: $release "
-    
     local value=$(grep "$2=" $release | cut -d'=' -f2)
     echo "[openjre_get_release_value] value: $value "
     
