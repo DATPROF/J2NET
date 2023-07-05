@@ -106,7 +106,7 @@ function dotnet_restore {
     local path=$1
 
     pushd $path > /dev/null
-    echo "[dotnet] restore"
+    echo "[dotnet] restore --verbosity detailed"
     dotnet restore --no-cache
     popd > /dev/null
 }
