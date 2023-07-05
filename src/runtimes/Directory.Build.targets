@@ -14,7 +14,7 @@
     </Target>
 
     <ItemGroup>
-        <Content Include="build\J2NET.Runtime.*.targets" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="build" />
+        <Content Include="build\DATPROF.J2NET.Runtime.*.targets" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="build" />
         <Content Include="obj\openjre\**\*.*" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="openjre" />
         <Content Remove="obj\openjre\**\.DS_Store" />
     </ItemGroup>
