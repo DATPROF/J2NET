@@ -8,7 +8,7 @@
         <PackageProjectUrl>https://github.com/DATPROF/J2NET</PackageProjectUrl>
         <RepositoryUrl>https://github.com/DATPROF/J2NET</RepositoryUrl>
         <Company>DATPROF</Company>
-        <PackageId>DATPROF.J2NET.Runtime.linux-musl-x64</PackageId>
+        <PackageId>J2NET.Runtime.linux-musl-x64</PackageId>
         <Product>J2NET.Runtime.linux-musl-x64</Product>
     </PropertyGroup>
 
