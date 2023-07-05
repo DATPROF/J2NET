@@ -60,14 +60,26 @@ function openjre_verify {
     local path=$1
     local csproj="$path/$(basename $runtime).csproj"
 
+    echo "[openjre] csproj: $csproj"
+
     echo "[openjre] verify runtime identifier"
 
+    local openjre_release_value=openjre_get_release_value
+    
+    echo "[openjre] openjre_release_value: $openjre_release_value $"
+  
     local name=$(to_lower "$(openjre_get_release_value $path OS_NAME)")
     local arch=$(to_lower "$(openjre_get_release_value $path OS_ARCH)")
+
+    echo "[openjre] name: $name"
+    echo "[openjre] arch: $arch"
 
     local normalizedName=$(normalize_os $name)
     local normalizedArch=$(normalize_architecture $arch)
 
+    echo "[normalizedName] name: $normalizedName"
+    echo "[normalizedArch] arch: $normalizedArch"
+    
     if [[ "$normalizedName" == "linux" ]]; then
         local libc=$(to_lower "$(openjre_get_release_value $path LIBC)")
         if [[ "$libc" == "musl" ]]; then
