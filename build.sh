@@ -118,7 +118,7 @@ function nupkg_remove_lib {
     local project="$(basename $1)"
     local nupkg="DATPROF.$project.$version.nupkg"
     local tmpDir="$nupkg.tmp"
-    local nuspec="DATPROF.$tmpDir/$project.nuspec"
+    local nuspec="$tmpDir/DATPROF.$project.nuspec"
 
     pushd $outDir > /dev/null
 
