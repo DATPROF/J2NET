@@ -53,8 +53,6 @@ function to_lower {
 function openjre_get_release_value {
     local release="$1/obj/openjre/release"
     local value=$(grep "$2=" $release | cut -d'=' -f2)
-    echo "[openjre_get_release_value] value: $value "
-    
     echo $value | perl -pe 's/["\r\n\t\f\v]//g'
 }
 
@@ -62,27 +60,14 @@ function openjre_verify {
     local path=$1
     local csproj="$path/$(basename $runtime).csproj"
 
-    echo "[openjre] path: $path"
-    echo "[openjre] csproj: $csproj"
-
     echo "[openjre] verify runtime identifier"
 
-    local openjre_release_value="$(openjre_get_release_value)"
-    
-    echo "[openjre] openjre_release_value: $openjre_release_value $"
-  
     local name=$(to_lower "$(openjre_get_release_value $path OS_NAME)")
     local arch=$(to_lower "$(openjre_get_release_value $path OS_ARCH)")
-
-    echo "[openjre] name: $name"
-    echo "[openjre] arch: $arch"
 
     local normalizedName=$(normalize_os $name)
     local normalizedArch=$(normalize_architecture $arch)
 
-    echo "[normalizedName] name: $normalizedName"
-    echo "[normalizedArch] arch: $normalizedArch"
-    
     if [[ "$normalizedName" == "linux" ]]; then
         local libc=$(to_lower "$(openjre_get_release_value $path LIBC)")
         if [[ "$libc" == "musl" ]]; then
@@ -106,7 +91,7 @@ function dotnet_restore {
     local path=$1
 
     pushd $path > /dev/null
-    echo "[dotnet] restore --verbosity detailed"
+    echo "[dotnet] restore"
     dotnet restore --no-cache
     popd > /dev/null
 }
@@ -131,9 +116,9 @@ function dotnet_nuget_push {
 
 function nupkg_remove_lib {
     local project="$(basename $1)"
-    local nupkg="DATPROF.$project.$version.nupkg"
+    local nupkg="$project.$version.nupkg"
     local tmpDir="$nupkg.tmp"
-    local nuspec="$tmpDir/DATPROF.$project.nuspec"
+    local nuspec="$tmpDir/$project.nuspec"
 
     pushd $outDir > /dev/null
 
