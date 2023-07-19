@@ -1,4 +1,4 @@
-name: Release J2NET
+name: Release J2NET Runtimes
 run-name: Release J2NET Runtimes ${{ inputs.VERSION }}
 
 on:
