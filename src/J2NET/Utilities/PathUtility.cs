@@ -8,7 +8,7 @@ namespace J2NET.Utilities
     {
         public static string GetRuntimePath()
         {
-            var directory = Path.GetDirectoryName(typeof(PathUtility).Assembly.Location) ?? throw new DirectoryNotFoundException();
+            var directory = AppContext.BaseDirectory ?? throw new DirectoryNotFoundException();
             var runtimeIdentifier = GetRuntimeIdentifier();
             return Path.Combine(directory, "runtimes", runtimeIdentifier, "openjre", "bin", "java");
         }

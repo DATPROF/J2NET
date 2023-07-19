@@ -163,13 +163,3 @@ for runtime in src/runtimes/J2NET.Runtime.* ; do
     
     echo
 done
-
-echo " ** J2NET ** "
-dotnet_restore src/J2NET
-dotnet_pack src/J2NET
-
-if [[ "$2" == "--push" ]]; then
-    for nupkg in $outDir/*.nupkg ; do
-        dotnet_nuget_push $nupkg $source $apiKey
-    done
-fi

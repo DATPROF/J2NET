@@ -1,5 +1,5 @@
 name: Release J2NET
-run-name: Release J2NET ${{ inputs.VERSION }}
+run-name: Release J2NET Runtimes ${{ inputs.VERSION }}
 
 on:
   workflow_dispatch:
@@ -22,4 +22,4 @@ jobs:
 
       - name: Build & Push
         shell: bash
-        run: ./build.sh ${{ inputs.VERSION }} --push ${{ vars.J2NET_NUGET_SOURCE }} ${{ secrets.J2NET_NUGET_API_KEY }}
+        run: ./buildRuntimes.sh ${{ inputs.VERSION }} --push ${{ vars.J2NET_NUGET_SOURCE }} ${{ secrets.J2NET_NUGET_API_KEY }}
