@@ -22,4 +22,4 @@ jobs:
 
       - name: Build & Push
         shell: bash
-        run: ./build.sh ${{ inputs.VERSION }} --push ${{ vars.J2NET_NUGET_SOURCE }} ${{ secrets.J2NET_NUGET_API_KEY }}
+        run: ./buildMain.sh ${{ inputs.VERSION }} --push ${{ vars.J2NET_NUGET_SOURCE }} ${{ secrets.J2NET_NUGET_API_KEY }}
