@@ -20,7 +20,7 @@ publish_nuget:
   stage: publish
   script:
     - echo "Pushing J2NET version $VERSION"
-    - dotnet nuget push "artifacts/DATPROF.J2NET.$VERSION.nupkg" --api-key "$NUGET_API_KEY" --source "$NEXUS_URL"  --no-symbols
+    - dotnet nuget push "artifacts/DATPROF.J2NET.$VERSION.nupkg" --api-key "$NUGET_API_KEY" --source "$NEXUS_URL" --no-symbols
   when: manual
   tags:
     - windows  
